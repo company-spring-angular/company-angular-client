@@ -18,10 +18,10 @@
     "shelljs": "^0.2.6"
   },
   "scripts": {
-    "postinstall": "npm install bower && bower install",
+    "postinstall": "npm install http-server && npm install bower && bower install",
 
     "prestart": "npm install",
-    "start": "http-server ./app -a localhost -p 80 -c-1",
+    "start": "node app/app.js",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
