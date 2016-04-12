@@ -1,0 +1,35 @@
+<div id="companyList">
+
+    <h2>Company list</h2>
+
+    <div class="btn-toolbar">
+        <button class="btn btn-primary" ng-click="gotoCompanyNewPage()">New Company</button>
+    </div>
+
+    <hr/>
+
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Company Name</th>
+            <th>Address</th>
+            <th style="width: 36px;">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="company in companies">
+            <th scope="row">{{$index+1}}</th>
+            <td><a href ng-click="showCompany(company.cid)">{{company.name}}</a></td>
+            <td>{{company.address.street}} {{company.address.houseNumber}}/{{company.address.flatNumber}}, {{company.address.postalCode}}, {{company.address.city}} ({{company.address.country | uppercase}})</td>
+            <td>
+                <a href ng-click="gotoCompanyUpdatePage(company)" title="Update"><span
+                        class="glyphicon glyphicon-pencil"></span></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr/>
+
+</div>

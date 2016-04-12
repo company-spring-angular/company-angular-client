@@ -1,0 +1,27 @@
+<div id="companyDetail">
+
+    <address>
+        <strong>{{company.name}}</strong><br>
+        {{company.address.street}} {{company.address.houseNumber}}/{{company.address.flatNumber}}<br>
+        {{company.address.postalCode}}, {{company.address.city}} ({{company.address.country | uppercase}})<br>
+        <a href="mailto:#">{{company.email}}</a><br>
+        <abbr title="Phone">P:</abbr> ({{company.phone.areaCode}}) {{company.phone.number}}
+    </address>
+
+    <address>
+        <h2>
+            <small>Beneficials</small>
+        </h2>
+        <ul class="list-unstyled">
+            <li ng-repeat="owner in company.owners">
+                <strong>{{owner.firstName}} {{owner.lastName}}</strong>
+            </li>
+        </ul>
+    </address>
+
+    <hr/>
+
+    <button class="btn" ng-click="gotoCompanyListPage()">&lt; Go back</button>
+    <button class="btn btn-primary" ng-click="gotoCompanyUpdatePage(company)">Update</button>
+
+</div>

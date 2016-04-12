@@ -1,0 +1,13 @@
+<div id="companyDetail">
+
+    <h2>Update company (id={{company.cid}})</h2>
+
+    <form class="form-horizontal css-form" role="form" name="form" novalidate>
+        <div ng-include="'views/common/_form.html'"></div>
+
+        <button class="btn" ng-click="gotoCompanyListPage()">&lt; Go back</button>
+        <button class="btn btn-primary" ng-disabled="form.$invalid" ng-click="update()">Update</button>
+    </form>
+
+
+</div>
