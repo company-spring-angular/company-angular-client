@@ -4,7 +4,7 @@ angular.module('companyApp.services', ['ngResource', 'ngRoute']).factory('Compan
 
     var data = undefined;
 
-    var res = $resource('http://localhost/v1/companies/:id',
+    var res = $resource('https://company-rest.herokuapp.com/v1/companies/:id',
         {id: "@id"},
         {
             'query': {method:'GET', isArray: true},
