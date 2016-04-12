@@ -7,7 +7,6 @@
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.1",
-    "http-server": "^0.6.1",
     "jasmine-core": "^2.3.4",
     "karma": "~0.12",
     "karma-chrome-launcher": "^0.1.12",
@@ -15,13 +14,14 @@
     "karma-jasmine": "^0.3.5",
     "karma-junit-reporter": "^0.2.2",
     "protractor": "^2.1.0",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.2.6",
+	"express": "3.x"
   },
   "scripts": {
-    "postinstall": "npm install http-server && npm install bower && bower install",
+    "postinstall": "npm install bower && bower install",
 
     "prestart": "npm install",
-    "start": "http-server ./app -p 80 -c-1",
+    "start": "node web.js",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
