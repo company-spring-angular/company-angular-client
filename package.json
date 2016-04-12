@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "company-angular-client",
   "private": true,
   "version": "0.0.0",
   "description": "An example project for integrating SpringMVC with AngularJS",
-  "repository": "https://github.com/company-spring-angular/company-spring-angular",
+  "repository": "https://github.com/company-spring-angular/company-angular-client",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.1",
@@ -21,7 +21,7 @@
     "postinstall": "npm install bower && bower install",
 
     "prestart": "npm install",
-    "start": "http-server ./app -a localhost -p 8000 -c-1",
+    "start": "http-server ./app -a localhost -p 80 -c-1",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
