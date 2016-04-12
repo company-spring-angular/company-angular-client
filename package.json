@@ -21,7 +21,7 @@
     "postinstall": "npm install http-server && npm install bower && bower install",
 
     "prestart": "npm install",
-    "start": "node app/app.js",
+    "start": "http-server ./app -a localhost -p 80 -c-1",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
